@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
+import InteractiveMap from '@/components/InteractiveMap';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -119,18 +120,8 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* Map placeholder */}
-            <Card>
-              <CardContent className="p-0">
-                <div className="w-full h-64 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive Map</p>
-                    <p className="text-sm text-muted-foreground">123 Safari Road, Windhoek</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Interactive Map */}
+            <InteractiveMap />
           </div>
 
           {/* Contact Form */}
