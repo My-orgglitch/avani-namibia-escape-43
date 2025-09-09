@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, Smartphone } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +56,7 @@ const Navigation = () => {
               <span>+264 66 267 800</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Cell className="w-4 h-4" />
+              <Smartphone className="w-4 h-4" />
               <span>+264 81 233 391 5</span>
             </div>
             <Button className="btn-luxury bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -97,7 +97,7 @@ const Navigation = () => {
                 <span>+264 66 267 800</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Cell className="w-4 h-4" />
+                <Smartphone className="w-4 h-4" />
                 <span>+264 81 233 391 5</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
