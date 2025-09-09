@@ -86,6 +86,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <p className="text-muted-foreground">+264 66 267 8007</p>
+                    <p className="text-muted-foreground">+264 81 233 391 5</p>
                   </div>
                 </CardContent>
               </Card>
@@ -200,7 +201,7 @@ const Contact = () => {
                 <h3 className="font-semibold mb-3">Quick Response</h3>
                 <p className="text-sm text-muted-foreground">
                   We typically respond to inquiries within 2-4 hours during business hours. 
-                  For urgent matters, please call us directly at +264 66 267 8007.
+                  For urgent matters, please call us directly at +264 66 267 8007 or +264 81 233 391 5.
                 </p>
               </CardContent>
             </Card>

@@ -92,7 +92,8 @@ serve(async (req) => {
             <p>Best regards,<br>
             The Guesthouse Team<br>
             Phone: +264 66 267 800<br>
-            Email: info@guesthouse.com</p>
+            cell: +264 81 233 391 5
+            Email: beautfortguests@gmail.com</p>
           </div>
         `;
         break;

@@ -69,7 +69,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-secondary-foreground/80">
-                    123 Safari Avenue<br />
+                    1234 Safari Avenue<br />
                     Windhoek, Namibia
                   </p>
                 </div>
@@ -79,10 +79,14 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <p className="text-secondary-foreground/80">+264 66 267 800</p>
               </div>
+              <div className="flex items-center space-x-3">
+                <Cell className="w-5 h-5 text-primary flex-shrink-0" />
+                <p className="text-secondary-foreground/80">+264 81 233 391 5</p>
+              </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-secondary-foreground/80">info@namibialodge.com</p>
+                <p className="text-secondary-foreground/80">beautfortguests@gmail.com</p>
               </div>
               
               <div className="flex items-start space-x-3">

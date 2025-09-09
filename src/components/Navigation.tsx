@@ -55,6 +55,10 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span>+264 66 267 800</span>
             </div>
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <Cell className="w-4 h-4" />
+              <span>+264 81 233 391 5</span>
+            </div>
             <Button className="btn-luxury bg-primary hover:bg-primary/90 text-primary-foreground">
               Book Now
             </Button>
@@ -93,8 +97,12 @@ const Navigation = () => {
                 <span>+264 66 267 800</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Cell className="w-4 h-4" />
+                <span>+264 81 233 391 5</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>info@namibialodge.com</span>
+                <span>beautfortguests@gmail.com</span>
               </div>
               <Button className="w-full btn-luxury bg-primary hover:bg-primary/90 text-primary-foreground">
                 Book Now

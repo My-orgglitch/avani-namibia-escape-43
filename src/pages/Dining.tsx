@@ -94,8 +94,8 @@ const Dining = () => {
               <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Reservations</h3>
               <p className="text-muted-foreground">
-                +264 66 267 8007<br />
-                dining@namibiaguesthouse.com<br />
+                +264 66 267 8007 / +264 81 233 391 5<br />
+                beautfortguests@gmail.com<br />
                 <Badge variant="secondary">Advance booking recommended</Badge>
               </p>
             </CardContent>
