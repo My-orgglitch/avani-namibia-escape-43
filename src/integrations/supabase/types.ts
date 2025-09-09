@@ -14,13 +14,277 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      activities: {
+        Row: {
+          capacity: number
+          category: string
+          created_at: string
+          description: string
+          difficulty_level: string
+          duration: string
+          id: string
+          images: string[]
+          includes: string[]
+          is_available: boolean
+          is_featured: boolean
+          name: string
+          price_nad: number
+          updated_at: string
+        }
+        Insert: {
+          capacity?: number
+          category?: string
+          created_at?: string
+          description: string
+          difficulty_level?: string
+          duration: string
+          id?: string
+          images?: string[]
+          includes?: string[]
+          is_available?: boolean
+          is_featured?: boolean
+          name: string
+          price_nad: number
+          updated_at?: string
+        }
+        Update: {
+          capacity?: number
+          category?: string
+          created_at?: string
+          description?: string
+          difficulty_level?: string
+          duration?: string
+          id?: string
+          images?: string[]
+          includes?: string[]
+          is_available?: boolean
+          is_featured?: boolean
+          name?: string
+          price_nad?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      bookings: {
+        Row: {
+          activity_id: string | null
+          booking_type: string
+          check_in_date: string
+          check_out_date: string | null
+          created_at: string
+          guest_email: string
+          guest_name: string
+          guest_phone: string | null
+          guests_count: number
+          id: string
+          payment_status: string
+          room_id: string | null
+          special_requests: string | null
+          status: string
+          total_amount_nad: number
+          updated_at: string
+        }
+        Insert: {
+          activity_id?: string | null
+          booking_type: string
+          check_in_date: string
+          check_out_date?: string | null
+          created_at?: string
+          guest_email: string
+          guest_name: string
+          guest_phone?: string | null
+          guests_count?: number
+          id?: string
+          payment_status?: string
+          room_id?: string | null
+          special_requests?: string | null
+          status?: string
+          total_amount_nad: number
+          updated_at?: string
+        }
+        Update: {
+          activity_id?: string | null
+          booking_type?: string
+          check_in_date?: string
+          check_out_date?: string | null
+          created_at?: string
+          guest_email?: string
+          guest_name?: string
+          guest_phone?: string | null
+          guests_count?: number
+          id?: string
+          payment_status?: string
+          room_id?: string | null
+          special_requests?: string | null
+          status?: string
+          total_amount_nad?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bookings_activity_id_fkey"
+            columns: ["activity_id"]
+            isOneToOne: false
+            referencedRelation: "activities"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bookings_room_id_fkey"
+            columns: ["room_id"]
+            isOneToOne: false
+            referencedRelation: "rooms"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gallery: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string
+          is_featured: boolean
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url: string
+          is_featured?: boolean
+          sort_order?: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string
+          is_featured?: boolean
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      ratings: {
+        Row: {
+          activity_id: string | null
+          created_at: string
+          guest_email: string | null
+          guest_name: string
+          id: string
+          rating: number
+          rating_type: string
+          review_text: string | null
+          room_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          activity_id?: string | null
+          created_at?: string
+          guest_email?: string | null
+          guest_name: string
+          id?: string
+          rating: number
+          rating_type: string
+          review_text?: string | null
+          room_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          activity_id?: string | null
+          created_at?: string
+          guest_email?: string | null
+          guest_name?: string
+          id?: string
+          rating?: number
+          rating_type?: string
+          review_text?: string | null
+          room_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ratings_activity_id_fkey"
+            columns: ["activity_id"]
+            isOneToOne: false
+            referencedRelation: "activities"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "ratings_room_id_fkey"
+            columns: ["room_id"]
+            isOneToOne: false
+            referencedRelation: "rooms"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      rooms: {
+        Row: {
+          amenities: string[]
+          capacity: number
+          created_at: string
+          description: string
+          id: string
+          images: string[]
+          is_available: boolean
+          is_featured: boolean
+          name: string
+          price_nad: number
+          size_sqm: number
+          updated_at: string
+        }
+        Insert: {
+          amenities?: string[]
+          capacity?: number
+          created_at?: string
+          description: string
+          id?: string
+          images?: string[]
+          is_available?: boolean
+          is_featured?: boolean
+          name: string
+          price_nad: number
+          size_sqm?: number
+          updated_at?: string
+        }
+        Update: {
+          amenities?: string[]
+          capacity?: number
+          created_at?: string
+          description?: string
+          id?: string
+          images?: string[]
+          is_available?: boolean
+          is_featured?: boolean
+          name?: string
+          price_nad?: number
+          size_sqm?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_activity_average_rating: {
+        Args: { activity_uuid: string }
+        Returns: number
+      }
+      get_room_average_rating: {
+        Args: { room_uuid: string }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never
