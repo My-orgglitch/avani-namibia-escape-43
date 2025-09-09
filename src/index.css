@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxury Guesthouse Design System - Inspired by Avani Hotels */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --primary: 51 100% 50%; /* Golden Yellow #FFD700 */
+    --primary-foreground: 0 0% 0%; /* Black text on gold */
+    
+    --secondary: 0 0% 0%; /* Pure Black #000000 */
+    --secondary-foreground: 0 0% 100%; /* White text on black */
+    
+    /* Elegant Neutrals */
+    --background: 0 0% 98%; /* Warm off-white */
+    --foreground: 0 0% 5%; /* Rich dark gray */
+    
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 0 0% 10%;
+    
+    /* Luxury Accents */
+    --accent: 45 15% 95%; /* Warm cream */
+    --accent-foreground: 0 0% 15%;
+    
+    --muted: 40 20% 92%; /* Soft beige */
+    --muted-foreground: 0 0% 45%;
+    
+    /* Interactive Elements */
+    --border: 40 15% 85%;
+    --input: 40 15% 92%;
+    --ring: 51 100% 50%; /* Gold ring */
+    
+    /* Status Colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Luxury Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(51 100% 50%), hsl(45 95% 45%));
+    --gradient-hero: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(40 20% 98%));
+    
+    /* Elegant Shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
+    --shadow-gold: 0 8px 30px -8px hsl(51 100% 50% / 0.3);
+    --shadow-deep: 0 20px 60px -20px hsl(0 0% 0% / 0.15);
+    
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.3s ease-in-out;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode maintains luxury aesthetic */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 90%;
+    
+    --accent: 40 15% 15%;
+    --accent-foreground: 0 0% 85%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    
+    --gradient-hero: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%), hsl(0 0% 15%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Luxury Card Styles */
+  .luxury-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-luxury);
+    transition: var(--transition-luxury);
+  }
+  
+  .luxury-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-deep);
+  }
+  
+  /* Gold Accent Elements */
+  .gold-accent {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-gold);
+  }
+  
+  /* Image Hover Effects */
+  .image-hover {
+    transition: var(--transition-luxury);
+    overflow: hidden;
+  }
+  
+  .image-hover img {
+    transition: var(--transition-luxury);
+  }
+  
+  .image-hover:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Elegant Button Animations */
+  .btn-luxury {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-luxury);
+  }
+  
+  .btn-luxury:hover::before {
+    left: 100%;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(51 100% 45%);
+  }
+}
