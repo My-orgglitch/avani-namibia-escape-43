@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Namibia Lodge - Luxury Guesthouse"
+          alt="Beaufort Guesthouse - Luxury Guesthouse"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 hero-gradient" />
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6">
-            Namibia Lodge
+            Beaufort Guesthouse
           </h1>
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Experience luxury hospitality in the heart of Northern Namibia. 

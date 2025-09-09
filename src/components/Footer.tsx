@@ -17,7 +17,7 @@ const Footer = () => {
                 <span className="text-secondary font-playfair font-bold text-xl">N</span>
               </div>
               <div>
-                <h3 className="text-xl font-playfair font-bold">Namibia Lodge</h3>
+                <h3 className="text-xl font-playfair font-bold">Beaufort Guesthouse</h3>
                 <p className="text-xs text-secondary-foreground/70">Luxury Guesthouse</p>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <p className="text-secondary-foreground/80">+264 61 123 456</p>
+                <p className="text-secondary-foreground/80">+264 66 267 800</p>
               </div>
               
               <div className="flex items-center space-x-3">
@@ -103,7 +103,7 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="text-lg font-playfair font-semibold mb-4">Stay Connected</h4>
             <p className="text-secondary-foreground/80 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter for exclusive offers, travel tips, and updates about new experiences at Namibia Lodge.
+              Subscribe to our newsletter for exclusive offers, travel tips, and updates about new experiences at Beaufort Guesthouse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-secondary-foreground/20 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-secondary-foreground/60">
-            <p>© {currentYear} Namibia Lodge. All rights reserved.</p>
+            <p>© {currentYear} Beaufort Guesthouse. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 sm:mt-0">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

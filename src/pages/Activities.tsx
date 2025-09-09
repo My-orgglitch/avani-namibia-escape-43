@@ -288,7 +288,7 @@ const Activities = () => {
               size="lg"
               className="btn-luxury border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary px-8"
             >
-              Call +264 61 123 456
+              Call +264 66 267 800
             </Button>
           </div>
         </div>

@@ -29,7 +29,7 @@ const Navigation = () => {
               <span className="text-secondary-foreground font-playfair font-bold text-xl">N</span>
             </div>
             <div>
-              <h1 className="text-xl font-playfair font-bold text-foreground">Namibia Lodge</h1>
+              <h1 className="text-xl font-playfair font-bold text-foreground">Beaufort Guesthouse</h1>
               <p className="text-xs text-muted-foreground">Luxury Guesthouse</p>
             </div>
           </Link>
@@ -53,7 +53,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>+264 61 123 456</span>
+              <span>+264 66 267 800</span>
             </div>
             <Button className="btn-luxury bg-primary hover:bg-primary/90 text-primary-foreground">
               Book Now
@@ -90,7 +90,7 @@ const Navigation = () => {
             <div className="pt-4 space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+264 61 123 456</span>
+                <span>+264 66 267 800</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
