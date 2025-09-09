@@ -21,7 +21,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -51,13 +51,15 @@ const Navigation = () => {
 
           {/* Contact Info & Book Now */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Phone className="w-4 h-4" />
-              <span>+264 66 267 800</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Smartphone className="w-4 h-4" />
-              <span>+264 81 233 391 5</span>
+            <div className="flex flex-col space-y-1">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="w-4 h-4" />
+                <span>+264 66 267 800</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Smartphone className="w-4 h-4" />
+                <span>+264 81 233 391 5</span>
+              </div>
             </div>
             <Button className="btn-luxury bg-primary hover:bg-primary/90 text-primary-foreground">
               Book Now
